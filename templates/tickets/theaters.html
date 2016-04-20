@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Theaters</title>
+    </head>
+
+    <body>
+        <h1>Theaters</h1>
+        {% if theaters %}
+        	<ul>
+        		{% for theater in theaters %}
+        		<li>Theater: {{theater.theater_name}}</li>
+                <li>Location: {{theater.address}}</li>
+                <li><a href="/tickets/purchase/">Purchase tickets</li>
+                <br />
+                <br />
+        		{% endfor %}
+        	</ul>
+        {% else %}
+        	<strong>There are no theaters present</strong>
+        {% endif %}
+    </body>
+</html>

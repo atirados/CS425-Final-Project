@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Home Page</title>
+    </head>
+
+    <body>
+        {% if user.is_authenticated %}
+            <h1>Welcome {{ user.username }}!</h1>
+            <li><a href="/login/profile/">My Profile</a></li>
+            <li><a href="/login/logout/">Logout</a></li>
+        {% else %}
+            <h1>Welcome GUEST!</h1>
+            <li><a href="/login/register/">Register</a></li>
+            <li><a href="/login/login/">Login</a></li>
+        {% endif %}
+        <li><a href="/forum">Forum</a></li>
+        <li><a href="/movies">Movies list</a></li>
+        <li><a href="/tickets">Purchase ticket</a></li>
+        <li><a href="/admin">Administrator</a></li>
+    </body>
+</html>

@@ -1,0 +1,19 @@
+<h1>{{ title }} </h1>
+
+{{"Purchase Tickets"}}
+
+<form method='POST' action=''>{% csrf_token %} 
+	{{form.as_p}}
+	<p>Movies Playing:</p>
+	
+	<input type='radio' name='movie' value='The Martian' checked>The Martian
+	<br>
+	<input type='radio' name='movie' value='Bridge of Spies' checked>Bridge of Spies
+	<br>
+	<input type='radio' name='movie' value='The Last Witch Hunter' checked>The Last Witch Hunter
+	<br>
+	<br>
+	<input type='submit' value='Purchase'/>
+	
+	
+</form>

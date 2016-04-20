@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Least Popular</title>
+    </head>
+
+    <body>
+        <h1>Least popular forum:</h1>
+        {% if topics %}
+            
+                <li>{{topics.title}}, Replies: {{topics.num_replies}}</li>
+
+        {% else %}
+            <strong>There are no topics present</strong>
+        {% endif %}
+    </body>
+</html>

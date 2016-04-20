@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Movies</title>
+    </head>
+
+    <body>
+        <h1>Movies</h1>
+        {% if movies %}
+        	<ul>
+        		{% for movie in movies %}
+        		<li>Title: {{movie.title}}</li>
+                <li>Director: {{movie.director}}</li>
+                <br />
+                <br />
+        		{% endfor %}
+        	</ul>
+        {% else %}
+        	<strong>There are no movies present</strong>
+        {% endif %}
+    </body>
+</html>

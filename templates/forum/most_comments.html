@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Most Comments</title>
+    </head>
+
+    <body>
+        <h1>User with most comments:</h1>
+        {% if users %}
+            
+                <li>{{users.username}}</li>
+
+        {% else %}
+            <strong>There are no topics present</strong>
+        {% endif %}
+    </body>
+</html>

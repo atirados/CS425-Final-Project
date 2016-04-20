@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Status Change</title>
+    </head>
+
+    <body>
+        {% if user.is_authenticated %}
+            <h1>Your status has changed!</h1>
+            <li>Your new status is: {{status}}</li>
+        {% endif %}
+        <br />
+        <br />
+        <a class="button" href="/forum/">Back to Forums</a>
+        <br />
+        <br />
+        <a class="button" href="/">Back to Home Page</a>
+    </body>
+</html>

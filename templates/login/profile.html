@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>User Profile</title>
+    </head>
+
+    <body>
+        <h1>User Profile</h1>
+        {% if user %}
+            {% if userProfile %}
+        	<ul>
+                <li>User Name: {{user.username}}</li>
+        		<li>Email: {{user.email}}</li>
+        		<li>Phone Number: {{userProfile.phone}}</li>
+                <li>Status: {{userProfile.status}}</li>
+                <li>Credits: {{userProfile.credits}}</li>
+        	</ul>
+            <a href="/login/update/">Update Profile</a>
+            {% endif %}
+        {% else %}
+        	<strong>No user with that name</strong>
+        {% endif %}
+        <br />
+        <a href="/">Return to the homepage.</a><br />
+    </body>
+</html>

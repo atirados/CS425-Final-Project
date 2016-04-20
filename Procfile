@@ -1,0 +1,1 @@
+web: gunicorn cs425Proj.wsgi --log-file -
